@@ -1,4 +1,4 @@
-package com.ra.model.dto;
+package com.ra.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

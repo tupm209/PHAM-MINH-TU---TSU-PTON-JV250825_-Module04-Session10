@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
+@Builder
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,7 +24,6 @@ public class User {
 
     @Column(nullable = false)
     private String fullName;
-
 
     @ManyToOne
     @JsonManagedReference

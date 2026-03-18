@@ -1,16 +1,22 @@
 package com.ra.model.entity;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Setter
-@Getter
+@Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name = "employees")
 public class Employee {
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String fullName;
-    private Double salary;
+    private String email;
+    private String avatarUrl;
 }
